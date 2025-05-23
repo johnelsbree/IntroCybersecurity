@@ -27,7 +27,8 @@ print(underline("SQLite will run this query:"))
 print(make_query(highlight(employeeID), highlight(password)))
 print()
 
-# Fetch the result
+# Run the query and Fetch the result
+cur.execute(query)
 employee_info = (cur.fetchall())
 
 # Print the result
