@@ -8,7 +8,7 @@ def underline(text):
   return "\033[4m" + text + "\033[0m"
 
 def highlight(text):
-  return "\033[93;103m" + text + "\033[0m"
+  return "\033[30;106m" + text + "\033[0m"
 
 def make_query(employeeID, password):
   return "SELECT firstname, lastname FROM employees WHERE employeeID = '" + employeeID + "' AND password = '" + password + "'"
