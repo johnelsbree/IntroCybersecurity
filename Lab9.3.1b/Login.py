@@ -24,7 +24,7 @@ query = make_query(employeeID, password)
 
 # Show the SQL query we are about to run
 print(underline("SQLite will run this query:"))
-print(make_query(highlight(employeeID), highlight(password))
+print(make_query(highlight(employeeID), highlight(password)))
 print()
 
 # Fetch the result
