@@ -4,11 +4,11 @@ import sqlite3
 con = sqlite3.connect('/home/kali/CourseFiles/IntroCybersecurity/chinook.db')
 cur = con.cursor()
 
-def bold(text):
-  return "\033[1m" + text + "\033[0m"
+def highlight(text):
+  return "\033[1;4m" + text + "\033[0m"
   
 # Prompt the user for login info
-print(bold("Chinook Corp - Login"))
+print(highlight("Chinook Corp - Login"))
 employeeID = input("EmployeeID: ")
 password = input("Password:   ")
 print()
@@ -17,7 +17,7 @@ print()
 query = "SELECT firstname, lastname FROM employees WHERE employeeID = '" + employeeID + "' AND password = '" + password + "'"
 
 # Show the SQL query we are about to run
-print(bold("SQLite will run this query:"))
+print(highlight("SQLite will run this query:"))
 print(query)
 print()
 
@@ -25,7 +25,7 @@ print()
 employee_info = (cur.fetchall())
 
 # Print the result
-print(bold("SQLite query result:"))
+print(highlight("SQLite query result:"))
 if employee_info:
   for x in employee_info:
     print(x)
